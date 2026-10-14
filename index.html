@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rehan Janjua — 3D Artist, Designer & Developer</title>
+  <meta name="description" content="Portfolio of Rehan Janjua: 3D modelling and rendering, graphic design, web and game development, AI tools, low-level NASM projects and published writing.">
+  <meta name="theme-color" content="#0b0d0e">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rehan Janjua — 3D Artist, Designer & Developer">
+  <meta property="og:description" content="From Blender renders to assembly language. Selected work, projects and writing.">
+  <meta property="og:image" content="https://rehanjanjua.github.io/Portfolio/assets/img/og.jpg">
+  <meta property="og:url" content="https://rehanjanjua.github.io/Portfolio/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/img/crystal-sm.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css">
+  <script>(function(){try{var n=navigator,c=n.connection||{},m=matchMedia("(prefers-reduced-motion: reduce)").matches;if(!m&&!c.saveData&&!/(^|-)2g$/.test(c.effectiveType||"")&&(n.hardwareConcurrency||4)>2&&(n.deviceMemory||4)>2&&window.WebGLRenderingContext&&"IntersectionObserver" in window&&location.protocol!=="file:")document.documentElement.classList.add("w3d")}catch(e){}})()</script>
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+  <a class="skip" href="#work">Skip to work</a>
+  <div class="progress" aria-hidden="true"></div><div class="spot" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="Rehan Janjua, home"><span class="mono-mark">RJ</span><span class="brand-name">Rehan Janjua</span></a>
+    <nav aria-label="Primary" id="menu">
+      <a href="#work">Work</a><a href="#code">Code</a><a href="#writing">Writing</a>
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#certs">Courses</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch to light theme"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></button>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span aria-hidden="true">☰</span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow" id="heroEyebrow"></p>
+        <h1 id="heroTitle"><span class="h-name">Rehan Janjua</span><span class="h-line" id="heroHeadline"></span></h1>
+        <p class="lead" id="heroIntro"></p>
+        <div class="cta">
+          <a class="btn primary" href="#work">Explore my work <span aria-hidden="true">→</span></a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+        <div class="scroll-cue mono" aria-hidden="true"><i></i>Scroll</div>
+        <ul class="hero-tags" aria-label="Disciplines"><li>3D &amp; render</li><li>Design</li><li>Web &amp; games</li><li>AI</li><li>NASM</li><li>Writing</li></ul>
+      </div>
+      <div class="hero-visual" id="heroVisual">
+        <img id="heroImg" src="assets/img/crystal-sm.webp" srcset="assets/img/crystal-sm.webp 800w, assets/img/crystal.webp 1800w" sizes="(min-width:900px) 50vw, 100vw" width="800" height="610" alt="A 3D render of a glowing green crystal cluster floating inside two dark curved arches." fetchpriority="high">
+        <canvas id="heroCanvas" aria-hidden="true" tabindex="-1"></canvas>
+        <span class="hero-caption mono">Crystal Monolith — 3D render</span>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section" aria-labelledby="workTitle">
+      <div class="section-head">
+        <p class="eyebrow">01 — Selected work</p>
+        <h2 id="workTitle">3D, simulation &amp; design</h2>
+      </div>
+      <div class="filters" id="filters" role="group" aria-label="Filter work by category"></div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <!-- CODE -->
+    <section id="code" class="section" aria-labelledby="codeTitle">
+      <div class="section-head">
+        <p class="eyebrow">02 — Build log</p>
+        <h2 id="codeTitle">Code &amp; systems</h2>
+        <p class="sub">Games, AI tools, apps and low-level experiments in C, C++, C#, Go, Ruby, Java, Lua, Python, JavaScript, Node.js and NASM.</p>
+      </div>
+      <div class="codegroups" id="codeGroups"></div>
+    </section>
+
+    <!-- WRITING -->
+    <section id="writing" class="section" aria-labelledby="writingTitle">
+      <div class="section-head">
+        <p class="eyebrow">03 — Writing &amp; research</p>
+        <h2 id="writingTitle">Books, papers &amp; analysis</h2>
+      </div>
+      <ol class="writing" id="writingList"></ol>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about" aria-labelledby="aboutTitle">
+      <div>
+        <p class="eyebrow">04 — About</p>
+        <h2 id="aboutTitle"></h2>
+        <div id="aboutText" class="prose"></div>
+      </div>
+      <dl class="facts" id="facts"></dl>
+    </section>
+
+    <!-- SKILLS + SERVICES -->
+    <section id="skills" class="section" aria-labelledby="skillsTitle">
+      <div class="section-head">
+        <p class="eyebrow">05 — Capabilities</p>
+        <h2 id="skillsTitle">What I work with</h2>
+      </div>
+      <div class="skills" id="skillList"></div>
+      <h3 class="subhead">Services</h3>
+      <div class="services" id="serviceList"></div>
+    </section>
+
+    <!-- COURSES -->
+    <section id="certs" class="section" aria-labelledby="certsTitle">
+      <div class="section-head">
+        <p class="eyebrow">06 — Courses &amp; certificates</p>
+        <h2 id="certsTitle">Always learning</h2>
+        <p class="sub">Completed courses and badges on AI agents, MCP and generative AI.</p>
+      </div>
+      <div class="certs" id="certList"></div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section id="journey" class="section" aria-labelledby="journeyTitle">
+      <div class="section-head">
+        <p class="eyebrow">07 — Learning journey</p>
+        <h2 id="journeyTitle">How I got here</h2>
+      </div>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact" aria-labelledby="contactTitle">
+      <div>
+        <p class="eyebrow">08 — Contact</p>
+        <h2 id="contactTitle">Have something in mind?</h2>
+        <p class="lead">Tell me what you need modelled, designed, built or written.</p>
+        <ul class="contact-list" id="contactList"></ul>
+      </div>
+      <form class="form" id="mailForm" aria-label="Send me an email">
+        <label>Your name<input name="name" autocomplete="name" required></label>
+        <label>Your email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Message<textarea name="msg" rows="5" required></textarea></label>
+        <button class="btn primary" type="submit">Open in my email app <span aria-hidden="true">→</span></button>
+        <p class="hint">This opens your email app with the message ready to send. Nothing is stored on this site.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="yr"></span> Rehan Janjua</span>
+    <span class="mono">Built by hand · HTML, CSS, JS</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <dialog id="modal" class="modal" aria-labelledby="mTitle">
+    <button class="icon-btn close" id="mClose" type="button" aria-label="Close project">✕</button>
+    <div class="m-body">
+      <figure class="m-media"><img id="mImg" alt=""></figure>
+      <div class="m-info">
+        <p class="eyebrow" id="mType"></p>
+        <h3 id="mTitle"></h3>
+        <p id="mDesc"></p>
+        <dl class="m-meta" id="mMeta"></dl>
+        <div class="m-nav"><button class="btn" id="mPrev" type="button">← Previous</button><button class="btn" id="mNext" type="button">Next →</button></div>
+      </div>
+    </div>
+  </dialog>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top"><svg viewBox="0 0 48 48" aria-hidden="true"><circle class="ring-bg" cx="24" cy="24" r="21"/><circle class="ring-fg" cx="24" cy="24" r="21" pathLength="100"/><path class="arrow" d="M24 32V17M17 24l7-7 7 7"/></svg></button>
+
+  <noscript><p style="padding:2rem;text-align:center">This portfolio needs JavaScript. Contact: janjuarehan37@gmail.com</p></noscript>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
